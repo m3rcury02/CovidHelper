@@ -6,39 +6,59 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/optiontext"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.372" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="124dp"
-        android:layout_height="86dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/donate"
-        android:textSize="17sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="193dp" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="124dp"
-        android:layout_height="86dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:text="@string/request"
-        android:textSize="17sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandable_fab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_alpha="0.50"
+            app:overlay_openingAnimationDurationMs="1000" />
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:id="@+id/expandable_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            app:efab_closingAnticipateTension="0"
+            app:efab_color="#9374DE"
+            app:efab_iconAnimationRotationDeg="180"
+            app:efab_size="normal" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="request"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#fc3503"
+            app:label_backgroundColor="#ed522b"
+            app:label_text="fighting" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/donate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="donate"
+            app:fabCustomSize="60dp"
+            app:fabSize="normal"
+            app:fab_color="#5bfa25"
+            app:label_backgroundColor="#48e014"
+            app:label_text="all" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

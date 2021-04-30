@@ -65,6 +65,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage-ktx:19.2.2'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.nambimobile.widgets:expandable-fab:1.0.2'
 
     // Testing
     testImplementation "junit:junit:$rootProject.junitVersion"
