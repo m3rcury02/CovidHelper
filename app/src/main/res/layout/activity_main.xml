@@ -9,9 +9,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="193dp" />
+        android:layout_height="match_parent" />
 
 
     <com.nambimobile.widgets.efab.ExpandableFabLayout
@@ -47,7 +45,7 @@
             app:fabSize="normal"
             app:fab_color="#fc3503"
             app:label_backgroundColor="#ed522b"
-            app:label_text="fighting" />
+            app:label_text="Request" />
 
         <com.nambimobile.widgets.efab.FabOption
             android:id="@+id/donate"
@@ -58,7 +56,7 @@
             app:fabSize="normal"
             app:fab_color="#5bfa25"
             app:label_backgroundColor="#48e014"
-            app:label_text="all" />
+            app:label_text="Donate" />
 
     </com.nambimobile.widgets.efab.ExpandableFabLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
