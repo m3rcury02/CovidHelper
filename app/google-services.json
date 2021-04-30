@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "122104203739",
+    "project_id": "covid-helper-7a140",
+    "storage_bucket": "covid-helper-7a140.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122104203739:android:635364b984c25fbb6afffe",
+        "android_client_info": {
+          "package_name": "com.example.covidhelper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "122104203739-eh45o9gr3m3bro8mane2ht1dke31n158.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUaXeaPhvzJj1D2i4Sgo-2fO6L2NJBBUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "122104203739-eh45o9gr3m3bro8mane2ht1dke31n158.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,8 +10,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val Reqbutton : Button = findViewById(R.id.button2)
-        Reqbutton.setOnClickListener{
+        val reqButton : Button = findViewById(R.id.button2)
+        reqButton.setOnClickListener{
           Toast.makeText(this, "this is a request button !!", Toast.LENGTH_LONG).show()
         }
     }
