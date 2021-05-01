@@ -33,7 +33,7 @@
             android:layout_marginBottom="20dp"
             app:efab_closingAnticipateTension="0"
             app:efab_color="#9374DE"
-            app:efab_iconAnimationRotationDeg="180"
+            app:efab_iconAnimationRotationDeg="45"
             app:efab_size="normal" />
 
         <com.nambimobile.widgets.efab.FabOption
