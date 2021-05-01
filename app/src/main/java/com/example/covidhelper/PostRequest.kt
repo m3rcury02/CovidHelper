@@ -38,5 +38,7 @@ class PostRequest : AppCompatActivity() {
         val desc = desc.text.toString().trim()
         val post = RequestDao()
         post.addRequest(name, phone, address, desc)
+        Toast.makeText(this, "successfully added..", Toast.LENGTH_SHORT).show()
+        finish()
     }
 }
