@@ -24,11 +24,12 @@
             android:text="Name : " />
 
         <EditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,11 +40,12 @@
             android:text="Phone Number :" />
 
         <EditText
+            android:id="@+id/phno"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,12 +56,17 @@
             android:text="Address : " />
 
         <EditText
+            android:id="@+id/add"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="textPostalAddress"/>
-
+            android:inputType="textPostalAddress"
+            android:textColor="@color/black" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/add"/>
 
 
     </LinearLayout>

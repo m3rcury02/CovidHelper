@@ -3,4 +3,11 @@
     <string name="optiontext">Please choose an option:</string>
     <string name="donate">Donate!</string>
     <string name="request">Request!</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Languages">
+        <item>Oxygen Cylinders</item>
+        <item>Blood</item>
+        <item>Plasma</item>
+    </string-array>
 </resources>
