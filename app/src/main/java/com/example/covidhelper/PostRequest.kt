@@ -23,9 +23,14 @@ class PostRequest : AppCompatActivity() {
         val desc = desc.text.toString().trim()
         val post = RequestDao()
         if (name.isNotEmpty() && phone.isNotEmpty() && address.isNotEmpty() && desc.isNotEmpty()) {
-            post.addRequest(name, phone, address, desc)
-            Toast.makeText(this, "successfully added..", Toast.LENGTH_SHORT).show()
-            finish()
+            if(phone.length > 10)
+                Toast.makeText(this, "Please enter a valid phone number.....", Toast.LENGTH_LONG).show()
+            else {
+
+                post.addRequest(name, phone, address, desc)
+                Toast.makeText(this, "successfully added..", Toast.LENGTH_SHORT).show()
+                finish()
+            }
         }
         else
             Toast.makeText(this, "Enter all the fields....", Toast.LENGTH_LONG).show()
