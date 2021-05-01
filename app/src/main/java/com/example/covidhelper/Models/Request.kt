@@ -5,5 +5,5 @@ data class Request(
     val phone: String="",
     val address: String="",
     val Description: String = "",
-    val createdBy: String="",
+    val createdBy: User = User(),
 )

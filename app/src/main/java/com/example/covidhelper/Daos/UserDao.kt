@@ -1,6 +1,8 @@
 package com.example.covidhelper.Daos
 
 import com.example.covidhelper.Models.User
+import com.google.android.gms.tasks.Task
+import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import kotlinx.coroutines.*
@@ -17,7 +19,7 @@ class UserDao {
         }
     }
 
-    fun getUserById(uId: String){
-
+    fun getUserById(uId: String): Task<DocumentSnapshot> {
+        return usersCollection.document(uId).get()
     }
 }
