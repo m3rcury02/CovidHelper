@@ -17,5 +17,8 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, PostRequest::class.java)
         startActivity(intent)
     }
-    fun donate(view: View) {}
+    fun donate(view: View) {
+        val intent = Intent(this, Donate::class.java)
+        startActivity(intent)
+    }
 }
