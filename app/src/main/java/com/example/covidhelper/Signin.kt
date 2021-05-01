@@ -76,7 +76,7 @@ class Signin : AppCompatActivity() {
 
         if (requestCode == RC_SIGN_IN) {
             val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            handleSigninTask(task);
+            handleSigninTask(task)
         }
     }
 
@@ -108,7 +108,6 @@ class Signin : AppCompatActivity() {
 
     private fun updateUI(firebaseUser: FirebaseUser?) {
         if (firebaseUser != null){
-
             val user = User(firebaseUser.uid,
                     firebaseUser.photoUrl.toString(),
                     firebaseUser.displayName)
