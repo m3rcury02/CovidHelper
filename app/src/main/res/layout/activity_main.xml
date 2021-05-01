@@ -24,49 +24,20 @@
         <com.nambimobile.widgets.efab.Overlay
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:overlay_alpha="0.50"
+            app:overlay_alpha="0.5"
             app:overlay_openingAnimationDurationMs="1000" />
 
         <com.nambimobile.widgets.efab.ExpandableFab
-            android:id="@+id/expandable_fab"
+            android:id="@+id/request"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|end"
             android:layout_marginEnd="20dp"
             android:layout_marginRight="20dp"
+            android:onClick="request"
             android:layout_marginBottom="20dp"
             app:efab_closingAnticipateTension="0"
             app:efab_color="#9374DE"
-            app:efab_iconAnimationRotationDeg="45"
             app:efab_size="normal"/>
-
-        <com.nambimobile.widgets.efab.FabOption
-            android:id="@+id/request"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="request"
-            app:fabCustomSize="70dp"
-            app:maxImageSize="35dp"
-            app:fab_color="#f44336"
-            app:fabSize="normal"
-            app:fab_icon="@drawable/meee"
-            android:layout_gravity="center_horizontal"
-            app:label_backgroundColor="#f44336"
-            app:label_text="Request" />
-
-        <com.nambimobile.widgets.efab.FabOption
-            android:id="@+id/donate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="donate"
-            android:layout_gravity="center_horizontal"
-            app:fab_icon="@drawable/donate"
-            app:fabCustomSize="112dp"
-            app:fabSize="normal"
-            app:maxImageSize="35dp"
-            app:fab_color="#4caf50"
-            app:label_backgroundColor="#4caf50"
-            app:label_text="Donate" />
-
     </com.nambimobile.widgets.efab.ExpandableFabLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
