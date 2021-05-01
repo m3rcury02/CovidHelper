@@ -3,4 +3,5 @@
     <string name="optiontext">Please choose an option:</string>
     <string name="donate">Donate!</string>
     <string name="request">Request!</string>
+    <string name="skip_signin"><![CDATA[Skip Signin >>>]]></string>
 </resources>
