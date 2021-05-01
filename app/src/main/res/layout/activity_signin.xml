@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="@string/app_name"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/background_dark"
         android:textFontWeight="1000"
         app:layout_constraintBottom_toTopOf="@+id/signInButton"
         app:layout_constraintEnd_toEndOf="parent"
