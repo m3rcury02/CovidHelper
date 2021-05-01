@@ -46,7 +46,7 @@
             android:layout_height="wrap_content"
             android:onClick="request"
             app:fabCustomSize="70dp"
-            app:maxImageSize="50dp"
+            app:maxImageSize="35dp"
             app:fab_color="#f44336"
             app:fabSize="normal"
             app:fab_icon="@drawable/meee"
@@ -63,7 +63,7 @@
             app:fab_icon="@drawable/donate"
             app:fabCustomSize="112dp"
             app:fabSize="normal"
-            app:maxImageSize="50dp"
+            app:maxImageSize="35dp"
             app:fab_color="#4caf50"
             app:label_backgroundColor="#4caf50"
             app:label_text="Donate" />
