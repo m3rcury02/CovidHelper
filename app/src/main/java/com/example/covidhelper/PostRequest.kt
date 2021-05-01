@@ -7,6 +7,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Spinner
 import android.widget.Toast
+import com.example.covidhelper.Daos.RequestDao
+import kotlinx.android.synthetic.main.activity_post_request.*
 
 class PostRequest : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,4 +29,14 @@ class PostRequest : AppCompatActivity() {
                     // write code to perform some action
                 }
             }
-}}}
+}}
+
+    fun postRequest(view: View) {
+        val name = name.text.toString().trim()
+        val phone = phone.text.toString().trim()
+        val address = address.text.toString().trim()
+        val desc = desc.text.toString().trim()
+        val post = RequestDao()
+        post.addRequest(name, phone, address, desc)
+    }
+}

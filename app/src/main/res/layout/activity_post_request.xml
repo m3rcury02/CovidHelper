@@ -40,7 +40,7 @@
             android:text="Phone Number :" />
 
         <EditText
-            android:id="@+id/phno"
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
@@ -56,7 +56,7 @@
             android:text="Address : " />
 
         <EditText
-            android:id="@+id/add"
+            android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
@@ -80,6 +80,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:textColor="@color/black"
+            android:id="@+id/desc"
             android:background="@drawable/bg"
             android:layout_marginTop="5dp"
             android:fontFamily="sans-serif-condensed-medium"
@@ -95,6 +96,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#5bfa25"
+                android:onClick="postRequest"
                 android:text="Request"/>
         </androidx.cardview.widget.CardView>
 
