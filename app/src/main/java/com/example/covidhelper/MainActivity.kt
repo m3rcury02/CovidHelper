@@ -42,7 +42,6 @@ class MainActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut()
             val intent = Intent(this, Signin::class.java)
             startActivity(intent)
-            Auth.GoogleSignInApi.signOut(mGoogleApiClient)
             finish()
         }
         return super.onOptionsItemSelected(item)
