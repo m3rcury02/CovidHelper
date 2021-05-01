@@ -21,7 +21,7 @@ class RequestDao {
     fun addRequest(name: String, phone: String, address: String, desc: String) {
         val currentUserId = auth.currentUser!!.uid
 
-        GlobalScope.launch(Dispatchers.IO) {
+        GlobalScope.launch {
             val userDao = UserDao()
             val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
             val currentTime = System.currentTimeMillis()

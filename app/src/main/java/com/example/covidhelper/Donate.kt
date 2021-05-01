@@ -13,22 +13,7 @@ class Donate : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_donate)
-        val languages = resources.getStringArray(R.array.Languages)
-        val spinner = findViewById<Spinner>(R.id.spinner)
-        if (spinner != null) {
-            val adapter = ArrayAdapter(this,
-                android.R.layout.simple_spinner_item, languages)
-            spinner.adapter = adapter
-            spinner.onItemSelectedListener = object :
-                AdapterView.OnItemSelectedListener {
-                override fun onItemSelected(parent: AdapterView<*>,
-                                            view: View, position: Int, id: Long) {
-                }
-                override fun onNothingSelected(parent: AdapterView<*>) {
-                    // write code to perform some action
-                }
-            }
-    }
+
 }
     fun postDonate(view: View) {
         val name = name.text.toString().trim()
