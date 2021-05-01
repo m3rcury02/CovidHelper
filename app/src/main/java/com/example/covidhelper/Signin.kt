@@ -96,6 +96,7 @@ class Signin : AppCompatActivity() {
         val credentials = GoogleAuthProvider.getCredential(idToken, null)
         signInButton.visibility = View.GONE
         logo.visibility = View.GONE
+        appicon.visibility = View.GONE
         progress.visibility = View.VISIBLE
         GlobalScope.launch(Dispatchers.IO) {
             val auth = auth.signInWithCredential(credentials).await()
@@ -120,6 +121,7 @@ class Signin : AppCompatActivity() {
         else{
             signInButton.visibility = View.VISIBLE
             progress.visibility = View.GONE
+            appicon.visibility = View.VISIBLE
         }
 
     }

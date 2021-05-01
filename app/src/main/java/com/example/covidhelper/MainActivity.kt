@@ -5,28 +5,35 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.covidhelper.Daos.RequestDao
 import com.example.covidhelper.Models.Request
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
 import com.google.android.gms.auth.api.Auth
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
+import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
+import com.google.android.gms.common.api.ResultCallback
+import com.google.android.gms.common.api.Status
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), GoogleApiClient.OnConnectionFailedListener {
 
     private lateinit var adapter: RequestAdapter
     private lateinit var requestDao: RequestDao
+    private var mGoogleApiClient: GoogleApiClient? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        mGoogleApiClient = GoogleApiClient.Builder(this)
+                .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
+                .addApi(Auth.GOOGLE_SIGN_IN_API)
+                .build()
 
         setUpRecyclerView()
     }
@@ -39,7 +46,12 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         val id = item.itemId
         if(id == R.id.signout){
-            FirebaseAuth.getInstance().signOut()
+            Auth.GoogleSignInApi.signOut(mGoogleApiClient).setResultCallback {
+                FirebaseAuth.getInstance().signOut()
+                val i1 = Intent(this@MainActivity, Signin::class.java)
+                startActivity(i1)
+                Toast.makeText(this@MainActivity, "Logout Successfully!", Toast.LENGTH_SHORT).show()
+            }
             val intent = Intent(this, Signin::class.java)
             startActivity(intent)
             finish()
@@ -76,5 +88,9 @@ class MainActivity : AppCompatActivity() {
     fun donate(view: View) {
         val intent = Intent(this, Donate::class.java)
         startActivity(intent)
+    }
+
+    override fun onConnectionFailed(p0: ConnectionResult) {
+        Toast.makeText(this, "Not Able to log you out !!!", Toast.LENGTH_SHORT).show()
     }
 }

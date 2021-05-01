@@ -68,6 +68,7 @@
         app:layout_constraintHorizontal_bias="0.533"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
         app:layout_constraintVertical_bias="0.54"
         app:srcCompat="@drawable/appicon" />
 
