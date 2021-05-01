@@ -18,17 +18,17 @@ class RequestDao {
     val postCollection = db.collection("Posts")
     val auth = Firebase.auth
 
-    fun addPost(text: String){
-        val currentUserId = auth.currentUser!!.uid
-        GlobalScope.launch(Dispatchers.IO) {
-            val userDao = UserDao()
-            val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
-            val currentTime = System.currentTimeMillis()
-            val post = Request(text, user, currentTime)
-            postCollection.document().set(post)
-        }
-    }
+//    fun addPost(text: String){
+//        val currentUserId = auth.currentUser!!.uid
+//        GlobalScope.launch(Dispatchers.IO) {
+//            val userDao = UserDao()
+//            val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
+//            val currentTime = System.currentTimeMillis()
+//            val post = Request(text, user, currentTime)
+//            postCollection.document().set(post)
+//        }
+//    }
 
     fun getPostById(id: String): Task<DocumentSnapshot>{
         return postCollection.document(id).get()
-    }
+    }}
