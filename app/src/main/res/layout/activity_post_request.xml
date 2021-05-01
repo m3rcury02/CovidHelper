@@ -62,9 +62,20 @@
             android:fontFamily="sans-serif-condensed-medium"
             android:inputType="textPostalAddress"
             android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I Need...."
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textSize="24sp"/>
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@id/add"/>
 
