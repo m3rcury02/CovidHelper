@@ -40,31 +40,31 @@
 
         <com.nambimobile.widgets.efab.FabOption
             android:id="@+id/request"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="request"
             app:fabCustomSize="112dp"
+            app:maxImageSize="30dp"
+            app:fab_color="#f44336"
             app:fabSize="auto"
-            app:fab_color="#F44336"
             app:fab_icon="@drawable/meee"
-            app:label_backgroundColor="#F44336"
-            app:label_text="Request"
-            app:maxImageSize="30dp" />
+            android:layout_gravity="center_horizontal"
+            app:label_backgroundColor="#f44336"
+            app:label_text="Request" />
 
         <com.nambimobile.widgets.efab.FabOption
             android:id="@+id/donate"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="donate"
+            android:layout_gravity="center_horizontal"
+            app:fab_icon="@drawable/donate"
             app:fabCustomSize="112dp"
             app:fabSize="auto"
-            app:fab_color="#4CAF50"
-            app:fab_icon="@drawable/donate"
-            app:label_backgroundColor="#4CAF50"
-            app:label_text="Donate"
-            app:maxImageSize="30dp" />
+            app:maxImageSize="30dp"
+            app:fab_color="#4caf50"
+            app:label_backgroundColor="#4caf50"
+            app:label_text="Donate" />
 
     </com.nambimobile.widgets.efab.ExpandableFabLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

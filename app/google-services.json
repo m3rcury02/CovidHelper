@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "122104203739-tihkicfvamk8jhajerfma9tk1hu59f3j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.covidhelper",
+            "certificate_hash": "4b9912b575e06a67eb3a67495225f24580466cdd"
+          }
+        },
+        {
           "client_id": "122104203739-tp6j1eu5jsij955uk49bmtitl61ih1cp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
