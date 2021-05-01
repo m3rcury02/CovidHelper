@@ -24,11 +24,12 @@
             android:text="Name : " />
 
         <EditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="textPersonName"/>
+            android:inputType="textPersonName"
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -39,11 +40,12 @@
             android:text="Phone Number :" />
 
         <EditText
+            android:id="@+id/phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
-            android:inputType="phone"/>
+            android:inputType="phone"
+            android:textColor="@color/black" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,13 +56,49 @@
             android:text="Address : " />
 
         <EditText
+            android:id="@+id/address"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:inputType="textPostalAddress"
+            android:textColor="@color/black" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/add"/>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:fontFamily="sans-serif-condensed-medium"
+            android:layout_marginTop="10dp"
+            android:text="Description : " />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:textColor="@color/black"
+            android:id="@+id/desc"
+            android:background="@drawable/bg"
+            android:layout_marginTop="5dp"
+            android:fontFamily="sans-serif-condensed-medium"
             android:inputType="textPostalAddress"/>
 
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#5bfa25">
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#5bfa25"
+                android:onClick="postRequest"
+                android:text="Request"/>
+        </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
