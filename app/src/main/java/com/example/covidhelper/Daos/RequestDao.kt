@@ -15,20 +15,20 @@ import kotlinx.coroutines.tasks.await
 class RequestDao {
 
     val db = FirebaseFirestore.getInstance()
-    val postCollection = db.collection("Posts")
+    val postCollection = db.collection("Requests")
     val auth = Firebase.auth
 
-//    fun addPost(text: String){
-//        val currentUserId = auth.currentUser!!.uid
-//        GlobalScope.launch(Dispatchers.IO) {
-//            val userDao = UserDao()
-//            val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
-//            val currentTime = System.currentTimeMillis()
-//            val post = Request(text, user, currentTime)
-//            postCollection.document().set(post)
-//        }
-//    }
+    fun addRequest(name: String, phone: String, address: String, desc: String) {
+        val currentUserId = auth.currentUser!!.uid
+        GlobalScope.launch(Dispatchers.IO) {
+            val userDao = UserDao()
+            val user = userDao.getUserById(currentUserId).toString()
+            val Request = Request(name, phone, address, desc, user)
+            postCollection.document().set(Request)
+        }
+    }
 
-    fun getPostById(id: String): Task<DocumentSnapshot>{
+    fun getPostById(id: String): Task<DocumentSnapshot> {
         return postCollection.document(id).get()
-    }}
+    }
+}
