@@ -24,12 +24,10 @@ class RequestDao {
         GlobalScope.launch(Dispatchers.IO) {
             val userDao = UserDao()
             val user = userDao.getUserById(currentUserId).await().toObject(User::class.java)!!
-            val request = Request(name, phone, address, desc, user)
+            val currentTime = System.currentTimeMillis()
+            val request = Request(name, phone, address, desc, currentTime, user)
             requestCollection.document().set(request)
         }
     }
 
-    fun getPostById(id: String): Task<DocumentSnapshot> {
-        return requestCollection.document(id).get()
-    }
 }
