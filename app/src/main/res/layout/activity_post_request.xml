@@ -19,9 +19,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="Name : "
             android:textColor="@color/black"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:text="Name : " />
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/name"
@@ -34,10 +35,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-condensed-medium"
             android:layout_marginTop="10dp"
-            android:text="Phone Number :" />
+            android:fontFamily="sans-serif"
+            android:text="Phone Number :"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/phone"
@@ -50,10 +52,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-condensed-medium"
             android:layout_marginTop="10dp"
-            android:text="Address : " />
+            android:fontFamily="sans-serif"
+            android:text="Address : "
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <EditText
             android:id="@+id/address"
@@ -66,10 +69,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-condensed-medium"
             android:layout_marginTop="10dp"
-            android:text="Description : " />
+            android:fontFamily="sans-serif"
+            android:text="Description : "
+            android:textColor="@color/black"
+            android:textSize="18sp" />
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -87,12 +91,13 @@
             app:cardCornerRadius="10dp"
             android:layout_marginTop="20dp"
             app:cardBackgroundColor="#5bfa25">
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#5bfa25"
                 android:onClick="postRequest"
-                android:text="Request"/>
+                android:text="Request!" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
