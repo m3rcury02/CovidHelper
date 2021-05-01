@@ -10,6 +10,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:padding="5dp"
+        android:maxHeight="70dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -18,6 +19,7 @@
         android:id="@+id/expandable_fab_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
 
         <com.nambimobile.widgets.efab.Overlay
             android:layout_width="match_parent"
