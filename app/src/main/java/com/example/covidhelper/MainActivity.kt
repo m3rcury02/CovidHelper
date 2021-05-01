@@ -13,6 +13,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
 
-    fun request(view: View) {}
+    fun request(view: View) {
+        val intent = Intent(this, PostRequest::class.java)
+        startActivity(intent)
+    }
     fun donate(view: View) {}
 }
